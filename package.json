@@ -1,0 +1,36 @@
+{
+  "name": "teqtok",
+  "version": "1.0.0",
+  "description": "This application has been developed as a CMS-style blog site for engineers and developers to publish blogs and comment on blog posts to get the conversations going.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peteCodes4u/TeqTok.git"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "postgres",
+    "ES6",
+    "handlebars"
+  ],
+  "author": "Peter J Smith (peteCodes4u)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peteCodes4u/TeqTok/issues"
+  },
+  "homepage": "https://github.com/peteCodes4u/TeqTok#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.4.5",
+    "express-handlebars": "^7.1.3",
+    "express-session": "^1.18.0",
+    "pg": "^8.12.0",
+    "sequelize": "^6.37.3"
+  }
+}

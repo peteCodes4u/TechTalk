@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeqTok</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+ 
+  <nav>
+    <a id="home-href" href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a id="dashboard-href" href="/dasboard">Dashboard</a>
+    <a id="signup-href" href="/signup">Sign Up!</a>
+    <a id="login-href" href="/login">Login</a>
+    {{/if}}
+    <header>
+      <h1>TeqTok</h1>
+    </header>
+  </nav>
+  <main>
+    <aside id="articles-landing">
+      <h2>Articles</h2>
+    </aside>
+    <div class="articles">
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
+
+

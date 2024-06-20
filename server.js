@@ -24,7 +24,7 @@ const app = express();
 
 const sess = {
     secret: process.env.SESSIONSECRET,
-    cookie: {},
+    cookie: {maxAge: 24 * 60 * 60 * 1000,},
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore ({
@@ -32,7 +32,7 @@ const sess = {
     })
 };
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 // express-session and store as express.js middleware
 app.use(session(sess));

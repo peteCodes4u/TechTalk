@@ -10,20 +10,23 @@
 </head>
 
 <body>
-  <header>
-    <h1>Welcome to the TeqTok - a technology blog space</h1>
-  </header>
+ 
   <nav>
-    <a href="/">Home</a>
+    <a id="home-href" href="/">Home</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
-    <a href="/login">Login</a>
+    <a id="dashboard-href" href="/dasboard">Dashboard</a>
+    <a id="signup-href" href="/signup">Sign Up!</a>
+    <a id="login-href" href="/login">Login</a>
     {{/if}}
+    <header>
+      <h1>TeqTok</h1>
+    </header>
   </nav>
   <main>
-    <aside>
-      <h2>Articles!</h2>
+    <aside id="articles-landing">
+      <h2>Articles</h2>
     </aside>
     <div class="articles">
       {{{body}}}
@@ -35,3 +38,5 @@
 </body>
 
 </html>
+
+

@@ -1,9 +1,19 @@
 const router = require('express').Router();
+const { Article } = require('../models');
+
 
 // home route
-router.get('/', (req, res) => {
-  try{res.render('homepage', {loggedIn: req.session.loggedIn});} 
-  catch (err) {
+router.get('/', async (req, res) => {
+  try{
+    const dbArticlesData = await Article.findAll({
+      include: [{all: true, nested: true }]
+    });
+    const articles = dbArticlesData.map((article) => article.get({plain: true}));
+    res.render('homepage', {
+    articles,
+    loggedIn: req.session.loggedIn
+  });
+} catch (err) {
     console.log(err);
     res.status(500).json(err)
   } 

@@ -10,7 +10,7 @@
 </head>
 
 <body>
- 
+
   <nav>
     <a id="home-href" href="/">Home</a>
     {{#if loggedIn}}
@@ -27,10 +27,10 @@
   <main>
     <aside id="articles-landing">
       <h2>Articles</h2>
+      <div class="articles">
+        {{{body}}}
+      </div>
     </aside>
-    <div class="articles">
-      {{{body}}}
-    </div>
   </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
@@ -38,7 +38,3 @@
 </body>
 
 </html>
-
-
-
-

@@ -29,19 +29,12 @@ router.post('/login', async (req, res) => {
       },
     });
 
-    if (!dbUserData) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
-      return;
-    }
-
     const validPassword = await dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+        .json({ message: 'Sorry balrog! YOU SHALL NOT PASS!!,  the password supplied is not correct. Please try again!' });
       return;
     }
 
@@ -54,11 +47,11 @@ router.post('/login', async (req, res) => {
 
       res
         .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
+        .json({ user: dbUserData, message: 'Success Gandalf, will permit your passage to helms deep! You are now logged in!' });
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(422).json(`Sorry balrog! YOU SHALL NOT PASS!! this email does not appear in our records`+ err);
   }
 });
 

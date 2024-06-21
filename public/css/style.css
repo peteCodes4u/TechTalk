@@ -58,24 +58,25 @@
     height: 100%;
   }
   
-  nav {
+  nav, #logout {
     display: flex;
     background-color: var(--secondary);
   }
   
-  nav a, #signup-href, #home-href, #dashboard-href {
+  nav a, #signup-href, #home-href, #dashboard-href, #logout {
     color: var(--light);
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
   }
   
-  nav a:hover, #login-href:hover {
+  nav a:hover, #login-href:hover, #logout:hover {
     color: var(--secondary);
     background-color: var(--dark);
   }
   
-  .btn-no-style {
+  /* .btn-no-style {
+    color: var(--light);
     background: none;
     border: none;
     padding: 0;
@@ -84,7 +85,7 @@
     font-size: 100%;
     transition: color 0.1s;
     margin-left: 16px;
-  }
+  } */
   
   img {
     max-width: 100%;

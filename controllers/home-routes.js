@@ -2,7 +2,11 @@ const router = require('express').Router();
 
 // home route
 router.get('/', (req, res) => {
-res.render('homepage');
+  try{res.render('homepage', {loggedIn: req.session.loggedIn});} 
+  catch (err) {
+    console.log(err);
+    res.status(500).json(err)
+  } 
 });
 // dasboard route
 

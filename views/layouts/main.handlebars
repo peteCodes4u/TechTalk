@@ -14,9 +14,9 @@
   <nav>
     <a id="home-href" href="/">Home</a>
     {{#if loggedIn}}
+    <a id="dashboard-href" href="/dasboard">Dashboard</a>
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
-    <a id="dashboard-href" href="/dasboard">Dashboard</a>
     <a id="signup-href" href="/signup">Sign Up!</a>
     <a id="login-href" href="/login">Login</a>
     {{/if}}
@@ -38,5 +38,7 @@
 </body>
 
 </html>
+
+
 
 

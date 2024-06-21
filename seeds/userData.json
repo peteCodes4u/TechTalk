@@ -1,0 +1,23 @@
+[
+ {
+    "email": "peter.appliedanalyticalsciences@gmail.com",
+    "password": "wordpass123"
+ },
+ 
+ {
+    "email": "user1.test@hotmail.com",
+    "password": "wordpass123"
+ },
+ {
+    "email": "user2.test@aol.com",
+    "password": "wordpass123"
+ },
+ {
+    "email": "user3.test@yahoo.com",
+    "password": "wordpass123"
+ },
+ {
+    "email": "user4.skynet@msn.com",
+    "password": "wordpass123"
+ }
+]

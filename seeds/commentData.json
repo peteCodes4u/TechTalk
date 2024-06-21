@@ -1,0 +1,38 @@
+[
+    {
+        "user_id": 3,
+        "article_id": 1,
+        "comment_date":  "October 7, 2023",
+        "comment": "Well said Martin!"
+    },
+    {
+        "user_id": 4,
+        "article_id": 1,
+        "comment_date":  "October 7, 2023",
+        "comment": "TRUTH"
+    },
+    {
+        "user_id": 5,
+        "article_id": 1,
+        "comment_date":  "October 7, 2023",
+        "comment": "I can agree with this, definately sharing to my colleagues and students!"
+    },
+    {
+        "user_id": 1,
+        "article_id": 2,
+        "comment_date":  "October 7, 2023",
+        "comment": "...uh...ok"
+    },
+    {
+        "user_id": 2,
+        "article_id": 2,
+        "comment_date":  "October 7, 2023",
+        "comment": "I mean he has a point, kinda disjointed but a point none the less"
+    },
+    {
+        "user_id": 1,
+        "article_id": 3,
+        "comment_date":  "October 7, 2023",
+        "comment": "now this is what I was looking for, def down to upvote this"
+    }
+]

@@ -107,7 +107,7 @@
     max-width: 100%;
     padding: 5px;
     border: 3px solid;
-    background-image: linear-gradient(to left, #743ad5, #3ab1d5);
+    background-image: linear-gradient(to left, #743ad5, #0af784);
     color: #fff;
   }
 
@@ -117,7 +117,7 @@
     max-width: 100%;
     padding: 5px;
     border: 3px solid;
-    background-image: linear-gradient(to right, #d5a93a, #743ad5);
+    background-image: linear-gradient(to right, #fe0ab1, #743ad5);
     color: #fff;
   }
   

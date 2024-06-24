@@ -8,3 +8,8 @@
         {{> comment-details}}
         {{/each}}
     </section>
+    {{#if loggedIn}}
+    <section>
+        <button class="btn btn-primary" >Add Comment</button>
+    </section>
+    {{/if}}

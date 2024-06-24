@@ -1,14 +1,22 @@
 const router = require('express').Router();
-const { Article } = require('../models');
+const { Article, Comment } = require('../models');
 
 
-// home route
+// Get all Articles for home page
 router.get('/', async (req, res) => {
   try{
     const dbArticlesData = await Article.findAll({
-      include: [{all: true, nested: true }]
+
+      include: [
+        {
+          model: Comment,
+          attributes: ['comment', 'comment_date'] 
+        },
+      ],
     });
-    const articles = dbArticlesData.map((article) => article.get({plain: true}));
+
+    const articles = dbArticlesData.map((article) => 
+      article.get({plain: true}));
     res.render('homepage', {
     articles,
     loggedIn: req.session.loggedIn
@@ -18,6 +26,29 @@ router.get('/', async (req, res) => {
     res.status(500).json(err)
   } 
 });
+
+// Get one article
+router.get('/article/:id', async (req, res) => {
+
+  try{
+    const dbArticlesData = await Article.findByPk(req.params.id, {
+      include: [
+        {
+          model: Comment,
+          attributes: [
+            'comment',
+            'comment_date',
+            'user_id'
+          ],
+        },
+      ],
+    });
+    const article = dbArticlesData.get({ plain: true});
+    res.render('article', {article, loggedIn: req.session.loggedIn})
+  }catch(err){res.status(500).json(err)}
+
+});
+
 // dasboard route
 
 // signup route

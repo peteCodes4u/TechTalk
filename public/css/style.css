@@ -29,6 +29,16 @@
     border-width: 5px;
     border-image-source: linear-gradient(to left,#f10678, #01ff4d );
   }
+
+  .comment {
+    color: black;
+    background-color: rgb(244, 244, 215);
+    padding: 10px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left,#f10678, #01ff4d );
+  }
   
   a {
     color: var(--dark);

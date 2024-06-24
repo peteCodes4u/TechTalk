@@ -1,0 +1,10 @@
+    <h3>{{article.title}}</h3>
+    <p>{{article.blog}}</p>
+    <p>{{format_date article.post_date}}</p>
+    <p>{{article.user_id}}</p>
+    <h4>Comments:</h4>
+    <section>
+        {{#each article.comments as |comment|}}
+        {{> comment-details}}
+        {{/each}}
+    </section>

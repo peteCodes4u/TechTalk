@@ -19,10 +19,6 @@ Article.init (
                 key: 'id',
             },
         },
-        post_date: {
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
         title: {
             type: DataTypes.STRING,
             allowNull: false,

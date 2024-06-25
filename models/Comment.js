@@ -29,12 +29,6 @@ Comment.init(
                 key: 'id'
             },
         },
-
-        comment_date: {
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
-
         comment: {
             type: DataTypes.STRING,
             allowNull: false,

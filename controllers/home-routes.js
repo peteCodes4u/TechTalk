@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Article, Comment } = require('../models');
+const { Article, Comment, User } = require('../models');
 
 
 // Get all Articles for home page
@@ -10,7 +10,15 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: ['comment', 'comment_date'] 
+          attributes: ['comment', 'created_at'], 
+          include: {
+            model: User,
+            attributes: ['email']
+          }
+        },
+        {
+          model: User,
+          attributes: ['email'],
         },
       ],
     });
@@ -37,13 +45,21 @@ router.get('/article/:id', async (req, res) => {
           model: Comment,
           attributes: [
             'comment',
-            'comment_date',
-            'user_id'
+            'created_at'
           ],
+          include: {
+            model: User,
+            attributes: ['email']
+          },
+        },
+        {
+          model: User,
+          attributes: ['email']
         },
       ],
     });
     const article = dbArticlesData.get({ plain: true});
+    console.log(article);
     res.render('article', {article, loggedIn: req.session.loggedIn})
   }catch(err){res.status(500).json(err)}
 

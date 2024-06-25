@@ -76,6 +76,11 @@
     background-color: var(--tertiary);
     display: flex;
     flex-direction: column;
+    
+  }
+
+  .post-title {
+    color: #01ff4d;
   }
   
   nav, #logout {
@@ -117,7 +122,7 @@
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
-    background-image: linear-gradient(to right, #743ad5, #0af784);
+    background-image: linear-gradient(to right, #f10678, #01ff4d);
     border-image-source: linear-gradient(to left,#f10678, #01ff4d );
   }
   
@@ -128,7 +133,7 @@
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
-    background-image: linear-gradient(to right, #fe0ab1, #743ad5);
+    background-image: linear-gradient(to left, #fe0ab1, #01ff4d);
     border-image-source: linear-gradient(to left,#f10678, #01ff4d );
   }
   

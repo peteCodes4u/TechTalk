@@ -1,14 +1,14 @@
-    <h3>{{article.title}}</h3>
+    <h3 class="post-title">{{article.title}}</h3>
     <p>{{article.blog}}</p>
-    <p>{{format_date article.post_date}}</p>
-    <p>{{article.user_id}}</p>
+    <p><a>{{format_date article.createdAt}}</a></p>
+    <p><a>{{article.user.email}}</a></p>
+    {{#if loggedIn}}
     <h4>Comments:</h4>
     <section>
         {{#each article.comments as |comment|}}
         {{> comment-details}}
         {{/each}}
     </section>
-    {{#if loggedIn}}
     <section>
         <button class="btn btn-primary" >Add Comment</button>
     </section>

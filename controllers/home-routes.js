@@ -67,6 +67,9 @@ router.get('/article/:id', async (req, res) => {
 });
 
 // dasboard route
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard');
+});
 
 // signup route
 router.get('/signup', (req, res) => {

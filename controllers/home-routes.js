@@ -59,8 +59,9 @@ router.get('/article/:id', async (req, res) => {
       ],
     });
     const article = dbArticlesData.get({ plain: true});
+    const user_id = req.session.user_id;
     console.log(article);
-    res.render('article', {article, loggedIn: req.session.loggedIn})
+    res.render('article', {article, user_id, loggedIn: req.session.loggedIn})
   }catch(err){res.status(500).json(err)}
 
 });

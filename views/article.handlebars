@@ -1,15 +1,21 @@
-    <h3 class="post-title">{{article.title}}</h3>
-    <p>{{article.blog}}</p>
-    <p><a>{{format_date article.createdAt}}</a></p>
-    <p><a>{{article.user.email}}</a></p>
-    {{#if loggedIn}}
-    <h4>Comments:</h4>
-    <section>
-        {{#each article.comments as |comment|}}
-        {{> comment-details}}
-        {{/each}}
-    </section>
-    <section>
-        <button class="btn btn-primary" >Add Comment</button>
-    </section>
-    {{/if}}
+<h3 class="post-title">{{article.title}}</h3>
+<p>{{article.blog}}</p>
+<p><a>{{format_date article.createdAt}}</a></p>
+<p><a>{{article.user.email}}</a></p>
+{{#if loggedIn}}
+<h4>Comments:</h4>
+<section>
+    {{#each article.comments as |comment|}}
+    {{> comment-details}}
+    {{/each}}
+</section>
+<section>
+    <form id="addComment">
+        <label for="comment">Comment:</label>
+        <input class="form-input" type="text" id="comment" />
+        <button class="btn btn-primary" type="submit" id="post-comment">Add Comment</button>
+        <input type="hidden" id="user_id" value="{{user_id}}" />
+        <input type="hidden" id="article_id" value="{{article.id}}" />
+    </form>
+</section>
+{{/if}}

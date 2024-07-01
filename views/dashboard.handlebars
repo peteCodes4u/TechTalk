@@ -1,0 +1,14 @@
+{{#if loggedIn}}
+  <h1>Welcome to Your Dashboard</h1>
+  <ul>
+    {{#each articles}}
+      <li>
+        <h3>{{title}}</h3>
+        <p>{{content}}</p>
+      </li>
+    {{/each}}
+  </ul>
+  <input type="hidden" id="user_id" value="{{user_id}}" />
+{{else}}
+  <p>Please log in to view your dashboard.</p>
+{{/if}}

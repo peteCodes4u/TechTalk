@@ -68,7 +68,14 @@ router.get('/article/:id', async (req, res) => {
 
 // dasboard route
 router.get('/dashboard', (req, res) => {
-  res.render('dashboard');
+  if (req.session.loggedIn) {
+    
+    const user_id = req.session.user_id;
+    res.render('dashboard', {user_id, loggedIn: req.session.loggedIn });
+
+    return;
+  }
+  
 });
 
 // signup route

@@ -2,7 +2,7 @@ const postCommentFormHandler = async (event) => {
     event.preventDefault();
 
     const comment = document.getElementById('comment').value.trim();
-    const article_id = document.getElementById('article_id').value;
+    const article_id = window.location.pathname.split('/').pop();;
 
     if(comment) {
         console.log(comment);

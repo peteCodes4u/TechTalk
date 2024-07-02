@@ -76,7 +76,7 @@ router.get('/dashboard', async (req, res) => {
         where: { user_id: user_id },
         include: [
           {
-            model: User, // Include the User model to filter by user_id
+            model: User,
             attributes: ['email']
           }
         ]
@@ -92,7 +92,7 @@ router.get('/dashboard', async (req, res) => {
       res.status(500).json(err);
     }
   } else {
-    res.redirect('/login'); // Redirect to login if not logged in
+    res.redirect('/login');
   }
 });
 

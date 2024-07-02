@@ -67,15 +67,33 @@ router.get('/article/:id', async (req, res) => {
 });
 
 // dasboard route
-router.get('/dashboard', (req, res) => {
+router.get('/dashboard', async (req, res) => {
   if (req.session.loggedIn) {
-    
     const user_id = req.session.user_id;
-    res.render('dashboard', {user_id, loggedIn: req.session.loggedIn });
 
-    return;
+    try {
+      const dbArticlesData = await Article.findAll({
+        where: { user_id: user_id },
+        include: [
+          {
+            model: User, // Include the User model to filter by user_id
+            attributes: ['email']
+          }
+        ]
+      });
+
+      const articles = dbArticlesData.map((article) => article.get({ plain: true }));
+      res.render('dashboard', {
+        articles,
+        loggedIn: req.session.loggedIn
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  } else {
+    res.redirect('/login'); // Redirect to login if not logged in
   }
-  
 });
 
 // signup route

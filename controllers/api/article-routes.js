@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 });
 
 // get articles for dashboard by user_id
-router.get('/:user_id', async (req, res) => {
+router.get('/user-articles/:user_id', async (req, res) => {
     try {
         const dbArticlesData = await Article.findAll({
             where: { user_id: req.params.user_id }

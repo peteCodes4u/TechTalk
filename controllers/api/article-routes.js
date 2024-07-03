@@ -11,14 +11,5 @@ router.get('/', async (req, res) => {
     } catch (err) { res.status(500).json(err) }
 });
 
-// get articles for dashboard by user_id
-router.get('/user-articles/:user_id', async (req, res) => {
-    try {
-        const dbArticlesData = await Article.findAll({
-            where: { user_id: req.params.user_id }
-        });
-        res.status(200).json(dbArticlesData);
-    } catch (err) { res.status(422).json(err) }
-});
 
 module.exports = router;

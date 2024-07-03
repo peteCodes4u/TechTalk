@@ -1,12 +1,11 @@
 {{#if loggedIn}}
 <h1>Welcome to Your Dashboard</h1>
-
 <ul>
 {{#each articles as |article|}}
-{{> article-details }}
+{{> edit-article-details }}
+<br>
 {{/each}}
 </ul>
-
 <button class="btn btn-primary" id="add-post">Add Post</button>
 {{else}}
 <p>Please log in to view your dashboard.</p>

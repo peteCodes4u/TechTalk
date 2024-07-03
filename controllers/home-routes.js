@@ -96,6 +96,11 @@ router.get('/dashboard', async (req, res) => {
   }
 });
 
+// add-article route
+router.get('/add-article', (req, res) => {
+  res.render('add-article');
+})
+
 // signup route
 router.get('/signup', (req, res) => {
   res.render('signup');

@@ -969,7 +969,7 @@ a:hover {
   display: flex !important;
 }
 
-.btn, .create-post-button {
+.btn, .create-post-button, .delete-post-buttton {
   text-align: center;
   display: inline-block;
   padding: 0.5rem 1.2rem;
@@ -1018,13 +1018,13 @@ a:hover {
   color: black;
 }
 
-.btn.btn-danger {
+.btn.btn-danger, .delete-post-buttton {
   background-color: #e64c66;
   color: #ffffff;
 }
 
-.btn.btn-danger:hover {
-  background-color: #ee8294;
+.btn.btn-danger:hover, .delete-post-buttton:hover {
+  background-color: #fe042e;
 }
 
 .btn.btn-info {

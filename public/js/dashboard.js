@@ -1,4 +1,3 @@
-
 //ref for update blog buttons 
 const updateBlogButton = document.querySelectorAll('.btn');
 
@@ -25,7 +24,6 @@ updateBlogButton.forEach(button => {
     });
 });
 
-
 const collapsibles = document.getElementsByClassName("collapsible");
 
 // Add click event listener to each collapsible element
@@ -41,4 +39,25 @@ for (let i = 0; i < collapsibles.length; i++) {
   });
 }
 
+// delete post buttons
+const delteBlogButton = document.querySelectorAll('.delete-post-buttton')
 
+delteBlogButton.forEach(button => {
+  button.addEventListener("click", async function(){
+    const articleId = button.value;
+
+    const isConfirmed = confirm("⚠️ Are you sure you want to delete this post, there is no undo? ⚠️");
+
+    if(isConfirmed) {
+      const response = await fetch(`/api/articles/${articleId}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+      }
+      });
+      if (response.ok){alert(`👻 This post has been DELETED 👻`)} else {
+        alert('😵 Sorry something went wrong, please refresh your browser and try again')
+      }
+    }
+  })
+})

@@ -136,6 +136,32 @@
     background-image: linear-gradient(to left, #fe0ab1, #01ff4d);
     border-image-source: linear-gradient(to left,#f10678, #01ff4d );
   }
+
+  .edit-blog {
+    font-size: 20px;
+    padding: 10px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    background-image: linear-gradient(to left, #fe0ab1, #01ff4d);
+    border-image-source: linear-gradient(to right,#f10678, #01ff4d );
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edit-blog-form-group {
+    margin-bottom: 10px;
+}
+
+.edit-blog-form-label {
+  margin-bottom: 5px;
+  color: black;
+}
+
+.edit-blog-input {
+  height: 100px;
+  width: 100%; 
+}
   
   .card header {
     color: var(--light);

@@ -14,7 +14,7 @@
   <nav>
     <a id="home-href" href="/">Home</a>
     {{#if loggedIn}}
-    <a id="dashboard-href" href="/dasboard">Dashboard</a>
+    <a id="dashboard-href" href="/dashboard">Dashboard</a>
     <button id="logout">Logout</button>
     {{else}}
     <a id="signup-href" href="/signup">Sign Up!</a>
@@ -26,7 +26,6 @@
   </nav>
   <main>
     <aside id="articles-landing">
-      <h2>Articles</h2>
       <div class="article">
         {{{body}}}
       </div>
@@ -35,6 +34,8 @@
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   <script src="/js/comment.js"></script>
+  <script src="/js/dashboard.js"></script>
+  <script src="/js/createArticle.js"></script>
   {{/if}}
 </body>
 

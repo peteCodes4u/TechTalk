@@ -15,6 +15,18 @@
         "user_id": 2,
         "title": "5 Critical Steps for developing your MERN stack app",
         "blog": "as many of you may already know, MERN leverages the technologies Mongo, Express, React and Node with javascript. Getting an app running quickly and efficiently with a MERN stach can be a great solution. If you are considering building an app here are the top 5 takeaways to consider"
+    },
+
+    {
+        "user_id": 4,
+        "title": "Test Article",
+        "blog": "This is the blog data"
+    },
+
+    {
+        "user_id": 4,
+        "title": "how to get rich quick and loose weight in only 5 simple steps!",
+        "blog": "Buzz word triggers you should always look out for, its a TRAAAAP!"
     }
 
 ]

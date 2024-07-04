@@ -60,13 +60,46 @@ router.get('/article/:id', async (req, res) => {
     });
     const article = dbArticlesData.get({ plain: true});
     const user_id = req.session.user_id;
-    console.log(article);
-    res.render('article', {article, user_id, loggedIn: req.session.loggedIn})
+    res.render('article', {article, user_id, loggedIn: req.session.loggedIn}
+    )
   }catch(err){res.status(500).json(err)}
 
 });
 
 // dasboard route
+router.get('/dashboard', async (req, res) => {
+  if (req.session.loggedIn) {
+    const user_id = req.session.user_id;
+
+    try {
+      const dbArticlesData = await Article.findAll({
+        where: { user_id: user_id },
+        include: [
+          {
+            model: User,
+            attributes: ['email']
+          }
+        ]
+      });
+
+      const articles = dbArticlesData.map((article) => article.get({ plain: true }));
+      res.render('dashboard', {
+        articles,
+        loggedIn: req.session.loggedIn
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  } else {
+    res.redirect('/login');
+  }
+});
+
+// add-article route
+router.get(`/add-article`, (req, res) => {
+  res.render(`add-article`, { loggedIn: req.session.loggedIn});
+})
 
 // signup route
 router.get('/signup', (req, res) => {

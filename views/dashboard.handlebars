@@ -1,0 +1,15 @@
+{{#if loggedIn}}
+<br>
+<h1>Welcome to Your Dashboard
+<a href="/add-article"><button class="btn btn-primary" id="add-post">Add New Post</button></a>
+</h1>
+<br>
+<ul>
+{{#each articles as |article|}}
+{{> edit-article-details }}
+<br>
+{{/each}}
+</ul>
+{{else}}
+<p>Please log in to view your dashboard.</p>
+{{/if}}

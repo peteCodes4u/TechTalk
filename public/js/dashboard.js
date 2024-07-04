@@ -1,4 +1,8 @@
+
+//ref for update blog buttons 
 const updateBlogButton = document.querySelectorAll('.btn');
+
+// Update post button logic
 updateBlogButton.forEach(button => {
     button.addEventListener("click", async function(){
         const title = button.parentElement.querySelector('#article-title').value.trim();

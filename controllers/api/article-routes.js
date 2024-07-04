@@ -29,9 +29,7 @@ router.put('/:id', async(req, res) => {
 
 // create article
 router.post('/:user_id', async(req, res) => {
-    const user_id = 
-    // req.session.user_id;
-    req.params.user_id
+    const user_id = req.session.user_id;
 try{
 
 

@@ -97,8 +97,8 @@ router.get('/dashboard', async (req, res) => {
 });
 
 // add-article route
-router.get('/add-article', (req, res) => {
-  res.render('add-article');
+router.get(`/add-article`, (req, res) => {
+  res.render(`add-article`, { loggedIn: req.session.loggedIn});
 })
 
 // signup route

@@ -5,7 +5,7 @@ const postCommentFormHandler = async (event) => {
     const article_id = window.location.pathname.split('/').pop();;
 
     if(comment) {
-        console.log(comment);
+
         const response = await fetch(`/api/comments`, {
             method: 'POST',
             body: JSON.stringify({ article_id, comment }),

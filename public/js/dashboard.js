@@ -26,5 +26,19 @@ updateBlogButton.forEach(button => {
 });
 
 
+const collapsibles = document.getElementsByClassName("collapsible");
+
+// Add click event listener to each collapsible element
+for (let i = 0; i < collapsibles.length; i++) {
+  collapsibles[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 
 

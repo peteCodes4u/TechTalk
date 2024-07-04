@@ -6,8 +6,12 @@
 <br>
 <ul>
 {{#each articles as |article|}}
-{{> edit-article-details }}
-<br>
+  <li>
+    <button class="collapsible">Article: {{article.title}}</button>
+    <div class="content">
+      {{> edit-article-details }}
+    </div>
+  </li>
 {{/each}}
 </ul>
 {{else}}

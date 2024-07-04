@@ -162,6 +162,26 @@
   height: 100px;
   width: 100%; 
 }
+
+.collapsible {
+  background-color: var(--tertiary);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.collapsible.active {
+  background-color: var(--light);
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+}
   
   .card header {
     color: var(--light);

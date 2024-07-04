@@ -13,7 +13,6 @@ const postCommentFormHandler = async (event) => {
         });
 
         if(response.ok) {
-            alert(`😎 comment posted! 😎`);
             document.location.reload(); 
         } else {
             alert('🤔 Sorry something went wrong. Please ensure you are logged in and refresh your browser');

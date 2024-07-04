@@ -18,6 +18,7 @@ const postBlogFormHandler = async (event) => {
         });
         if(response.ok) {
             alert(`👽 Post successfully created! 🌠 `)
+            window.location.href = '/dashboard';
         } else {
             alert('🤔 Sorry something went wrong, please refresh the page, ensure you are logged in and try again.');
         }

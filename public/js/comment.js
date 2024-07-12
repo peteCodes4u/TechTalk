@@ -19,6 +19,7 @@ const postCommentFormHandler = async (event) => {
         }
     }
 }
+
 document
     .getElementById('addComment')
     .addEventListener('submit', postCommentFormHandler);

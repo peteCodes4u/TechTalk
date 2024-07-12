@@ -42,5 +42,18 @@ try{
 } catch(err){res.status(422).json(err)}
 });
 
+// delete article
+router.delete('/:id', async(req, res) => {
+    try {
+        const deletedBlog = await Article.destroy({
+            where: {
+                id: req.params.id,
+            }
+        });
+        if(deletedBlog === 0){return res.status(404).json({message: "sorry, something went wrong, please refresh your browser and try again"})}
+        return res.status(200).json({message: "Post successfully deleted"})
+    } catch(err){res.status(422).json(err)}
+})
+
 
 module.exports = router;

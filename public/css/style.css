@@ -20,24 +20,38 @@
   }
 
   .article {
-
+    border-radius: 25px;
     margin: 10px;
     font-size: 20px;
+    padding: 30px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-color: #f10678;
+    box-shadow: 10px 5px 5px #164452;
+  }
+
+  #blogs {
+    border-radius: 25px;
+    background-color: black;
     padding: 10px;
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
-    border-image-source: linear-gradient(to left,#f10678, #01ff4d );
+    border-color: #01ff4d;
+    box-shadow: 10px 5px 5px #29154c;
   }
 
   .comment {
     color: black;
     background-color: rgb(244, 244, 215);
     padding: 10px;
-    border: 10px solid;
+    border: 5px solid;
     border-image-slice: 1;
     border-width: 5px;
-    border-image-source: linear-gradient(to left,#f10678, #01ff4d );
+    border-radius: 25px;
+    box-shadow: 10px 5px 5px #29154c;
+
   }
   
   a {
@@ -143,10 +157,12 @@
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
-    background-image: linear-gradient(to left, #fe0ab1, #01ff4d);
-    border-image-source: linear-gradient(to right,#f10678, #01ff4d );
+    background-color: #29154c;
+    /* background-image: linear-gradient(to left, #fe0ab1, #01ff4d); */
+    /* border-image-source: linear-gradient(to right,#f10678, #01ff4d ); */
     display: flex;
     flex-direction: column;
+    border-radius: 25px;
   }
 
   .edit-blog-form-group {
@@ -155,7 +171,7 @@
 
 .edit-blog-form-label {
   margin-bottom: 5px;
-  color: black;
+  color: white;
 }
 
 .edit-blog-input {
@@ -164,7 +180,7 @@
 }
 
 .collapsible {
-  background-color: var(--tertiary);
+  background-color: black;
   color: white;
   cursor: pointer;
   padding: 18px;

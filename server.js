@@ -32,8 +32,6 @@ const sess = {
     })
 };
 
-// app.use(express.static('public'));
-
 // express-session and store as express.js middleware
 app.use(session(sess));
 

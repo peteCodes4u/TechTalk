@@ -1,13 +1,13 @@
 {{#if loggedIn}}
 <br>
-<h1>Welcome to Your Dashboard
-<a href="/add-article"><button class="btn btn-primary" id="add-post">Add New Post</button></a>
+<h1>👽 Welcome to your dashboard!
+<a href="/add-article"><button class="btn btn-primary" id="add-post">Click Here to Add a New Post!</button></a>
 </h1>
 <br>
 <ul>
 {{#each articles as |article|}}
   <div id="blogs">
-    <button class="collapsible">Article: {{article.title}}</button>
+    <button class="collapsible">🌜 {{article.title}}</button>
     <div class="content">
       {{> edit-article-details }}
     </div>

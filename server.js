@@ -24,7 +24,8 @@ const app = express();
 
 const sess = {
     secret: process.env.SESSIONSECRET,
-    cookie: {maxAge: 24 * 60 * 60 * 1000,},
+    // set cookie to expire in 16 min
+    cookie: {maxAge: 16 * 60 * 1000,},
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore ({

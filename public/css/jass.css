@@ -1009,7 +1009,7 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #d5973a;
+  background-color: black;
   color: #d9e9e8;
 }
 
@@ -1019,7 +1019,7 @@ a:hover {
 }
 
 .btn.btn-danger, .delete-post-buttton {
-  background-color: #e64c66;
+  background-color: #fe052e;
   color: #ffffff;
 }
 

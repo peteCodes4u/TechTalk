@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 
+
+
+
 router.post('/', async (req, res) => {
     const user_id = req.session.user_id;
     try {

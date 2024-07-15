@@ -17,7 +17,7 @@ This application utilizes node package manager (npm). Inorder to run this applic
 ## Usage Information
 The intended usage for this appilication is to publish written text information on the internet for the purpose of sharing knowlege and building comunities.
 
-![](./images/TeqTok_demo-2.gif)
+![](./public/images/TeqTok_demo-2.gif)
 
 ## License
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)

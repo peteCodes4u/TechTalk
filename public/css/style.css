@@ -127,7 +127,9 @@
     border-image-slice: 1;
     border-width: 5px;
     background-image: linear-gradient(to right, #f10678, #01ff4d);
-    border-image-source: linear-gradient(to left,#f10678, #01ff4d );
+    border-width: 5px;
+    border-radius: 25px;
+    box-shadow: 10px 5px 5px #29154c;
   }
   
   .signup-card {
@@ -138,7 +140,9 @@
     border-image-slice: 1;
     border-width: 5px;
     background-image: linear-gradient(to left, #fe0ab1, #01ff4d);
-    border-image-source: linear-gradient(to left,#f10678, #01ff4d );
+    border-width: 5px;
+    border-radius: 25px;
+    box-shadow: 10px 5px 5px #29154c;
   }
 
   .edit-blog {
